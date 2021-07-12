@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "gbf",
+  "description": "gbf 輔助",
+  "version": "1.0",
+
+  "browser_action": 
+  {
+    "default_icon": "memo_off.png",
+    "default_popup": "pop.html"
+  },
+  "permissions": 
+  [
+    "activeTab","storage"
+  ],
+  "options_page": "option.html",
+  "content_scripts" : 
+  [
+   	{
+		"matches":["<all_urls>"],
+		"run_at":"document_end",
+		"js":["content.js"]
+	}
+  ]	
+}
